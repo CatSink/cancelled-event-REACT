@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Home from './pages/Home';
+import Login from '../src/pages/Login'
+import Signup from '../src/pages/Signup'
 // import Matchup from './pages/Matchup';
 // import Vote from './pages/Vote';
 import NotFound from './pages/NotFound';
@@ -17,8 +19,8 @@ function App() {
       <Router>
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
           <Routes>
-            <Route 
-              path="/" 
+            <Route
+              path="/"
               element={<Home />}
             />
             {/* <Route 
@@ -29,7 +31,15 @@ function App() {
               path="/matchup/:id" 
               element={<Vote />}
             /> */}
-            <Route 
+            <Route
+              path="/Login"
+              element={<Login />}
+            />
+            <Route
+              path="/Signup"
+              element={<Signup />}
+            />
+            <Route
               path="*"
               element={<NotFound />}
             />
