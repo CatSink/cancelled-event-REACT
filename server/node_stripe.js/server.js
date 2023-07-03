@@ -12,6 +12,6 @@ app.use(express.urlencoded({ extended : true }));
 app.use('/api/stripe', striperoutes);
 
 app.listen(5000, () => {
-    console.log("Listening on port 5000", 5000);
+    console.log("Listening on port 5000");
 });
 
