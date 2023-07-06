@@ -4,8 +4,7 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Home from './pages/Home';
 import Login from '../src/pages/Login'
 import Signup from '../src/pages/Signup'
-// import Matchup from './pages/Matchup';
-// import Vote from './pages/Vote';
+import Invite from '../src/pages/createInvite'
 import NotFound from './pages/NotFound';
 
 const client = new ApolloClient({
@@ -23,14 +22,10 @@ function App() {
               path="/"
               element={<Home />}
             />
-            {/* <Route 
-              path="/matchup" 
-              element={<Matchup />}
+            <Route
+              path="/createInvite"
+              element={<Invite />}
             />
-            <Route 
-              path="/matchup/:id" 
-              element={<Vote />}
-            /> */}
             <Route
               path="/Login"
               element={<Login />}
@@ -38,6 +33,10 @@ function App() {
             <Route
               path="/Signup"
               element={<Signup />}
+            />
+            <Route
+              path="/Home"
+              element={<Home />}
             />
             <Route
               path="*"

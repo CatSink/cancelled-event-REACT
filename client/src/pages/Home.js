@@ -15,6 +15,11 @@ const Home = () => {
       <Link to="/Signup">
         <button className="btn btn-primary">Sign Up</button>
       </Link>
+
+      {/* only here to find page */}
+      <Link to="/createInvite">
+        <button className="btn btn-primary">Invite </button>
+      </Link>
     </div >
   );
 };
