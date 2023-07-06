@@ -1,35 +1,42 @@
 [
   {
-    "name": "JavaScript"
+    "username": "catsink",
+    "email": "catsink@email.com",
+    "password": "password1",
+    "friends": [
+
+    ]
   },
   {
-    "name": "HTML"
+    "username": "jaimemarsh",
+    "email": "jaimemarsh@email.com",
+    "password": "password2",
+    "friends": [
+
+    ]
   },
   {
-    "name": "CSS"
+    "username": "janiecelewis",
+    "email": "janiecelewis@email.com",
+    "password": "password3",
+    "friends": [
+
+    ]
   },
   {
-    "name": "Node.js"
+    "username": "sofiemilillo",
+    "email": "sofiemilillo@email.com",
+    "password": "password4",
+    "friends": [
+
+    ]
   },
   {
-    "name": "Express.js"
-  },
-  {
-    "name": "MySQL"
-  },
-  {
-    "name": "MongoDB"
-  },
-  {
-    "name": "React"
-  },
-  {
-    "name": "GraphQL"
-  },
-  {
-    "name": "Sequelize"
-  },
-  {
-    "name": "Handlebars.js"
+    "username": "stephsimms",
+    "email": "stephaniesimmons@email.com",
+    "password": "password5",
+    "friends": [
+
+    ]
   }
 ]

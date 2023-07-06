@@ -23,6 +23,11 @@ const eventSchema = new Schema({
     required: true,
     trim: true,
   },
+  invitees: {
+    type: String,
+    required: true,
+    
+  }
   // startAt: {
   //   type: Date,
   //   required: true,
