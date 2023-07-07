@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css';
 
 function Invite() {
     const [selectedUsers, setSelectedUsers] = useState([]);
@@ -8,6 +10,9 @@ function Invite() {
     const [selectedPrice, setSelectedPrice] = useState('');
     const [selectedCancelTime, setSelectedCancelTime] = useState('');
     const [message, setMessage] = useState('');
+
+    //Datepicker code
+    const [startDate, setDate] = useState(new Date());
 
 
     const handleSelectChange = (e) => {
@@ -42,6 +47,7 @@ function Invite() {
         // Handle form submission
     };
 
+
     return (
         <div className="container my-1">
             <Link to="/home">← Back to Home</Link>
@@ -69,13 +75,8 @@ function Invite() {
                 <div className="flex-row space-between my-2">
                     <label htmlFor="date">Date</label>
                     <label>*Required</label>
-                    <input
-                        placeholder="Date"
-                        name="date"
-                        type="text"
-                        id="date"
-                        required
-                    />
+                    {/* DatePicker code */}
+                    <DatePicker selected={startDate} onChange={(date) => setDate(date)} />
                 </div>
                 <div className="flex-row space-between my-2">
                     <label htmlFor="date">Time</label>
