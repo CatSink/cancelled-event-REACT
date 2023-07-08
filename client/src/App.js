@@ -2,9 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Home from './pages/Home';
-import Login from '../src/pages/Login'
-import Signup from '../src/pages/Signup'
-import Invite from '../src/pages/createInvite'
+import Login from '../src/pages/Login';
+import Signup from '../src/pages/Signup';
+import Invite from '../src/pages/createInvite';
+import LoggedIn from '../src/pages/userHome'
+import CreatedEvents from '../src/pages/userInvites'
 import NotFound from './pages/NotFound';
 
 const client = new ApolloClient({
@@ -18,6 +20,14 @@ function App() {
       <Router>
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
           <Routes>
+            <Route
+              path="/userHome"
+              element={<LoggedIn />}
+            />
+            <Route
+              path="/userInvites"
+              element={<CreatedEvents />}
+            />
             <Route
               path="/"
               element={<Home />}

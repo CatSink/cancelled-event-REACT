@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Greeting from './greeting'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -50,7 +51,8 @@ function Invite() {
 
     return (
         <div className="container my-1">
-            <Link to="/home">← Back to Home</Link>
+            <Link to="/userHome">← Back to Home</Link>
+            <Greeting />
             <h2>Create Plans</h2>
             <p>To create plans please select the Who When and Where with our pre-selected options. The rest of the options are not required, but does help your friends when making the plans!</p>
 
