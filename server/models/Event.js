@@ -18,30 +18,30 @@ const eventSchema = new Schema({
   eventCreator: {
     type: Schema.Types.ObjectId,
     ref: 'User'
-  },
-  invitees: {
-    type: String,
-    required: true,
-  },
-  eventDate: {
-    required: true,
-  },
-  eventLocation: {
-    required: true,
-  },
-  outfitDescription: {
-
-  },
-  priceRange: {
-
-  },
-  cancellationWindow: {
-
-  },
-  message: {
-    type: String,
-    
   }
+  // invitees: {
+  //   type: String,
+  //   required: true,
+  // },
+  // eventDate: {
+  //   required: true,
+  // },
+  // eventLocation: {
+  //   required: true,
+  // },
+  // outfitDescription: {
+
+  // },
+  // priceRange: {
+
+  // },
+  // cancellationWindow: {
+
+  // },
+  // message: {
+  //   type: String,
+    
+  // }
 });
 
 const Event = model('Event', eventSchema);
