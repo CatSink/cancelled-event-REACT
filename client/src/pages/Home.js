@@ -17,8 +17,13 @@ const Home = () => {
       </Link>
 
       {/* only here to find page */}
-      <Link to="/createInvite">
+      {/* <Link to="/createInvite">
         <button className="btn btn-primary">Invite </button>
+      </Link> */}
+
+      {/* only here to find page */}
+      <Link to="/userHome">
+        <button className="btn btn-primary">Home </button>
       </Link>
     </div >
   );
