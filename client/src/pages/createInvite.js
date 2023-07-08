@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Greeting from './greeting'
+import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css';
 
 function Invite() {
     const [selectedUsers, setSelectedUsers] = useState([]);
@@ -8,6 +11,9 @@ function Invite() {
     const [selectedPrice, setSelectedPrice] = useState('');
     const [selectedCancelTime, setSelectedCancelTime] = useState('');
     const [message, setMessage] = useState('');
+
+    //Datepicker code
+    const [startDate, setDate] = useState(new Date());
 
 
     const handleSelectChange = (e) => {
@@ -42,9 +48,11 @@ function Invite() {
         // Handle form submission
     };
 
+
     return (
         <div className="container my-1">
-            <Link to="/home">← Back to Home</Link>
+            <Link to="/userHome">← Back to Home</Link>
+            <Greeting />
             <h2>Create Plans</h2>
             <p>To create plans please select the Who When and Where with our pre-selected options. The rest of the options are not required, but does help your friends when making the plans!</p>
 
@@ -69,13 +77,8 @@ function Invite() {
                 <div className="flex-row space-between my-2">
                     <label htmlFor="date">Date</label>
                     <label>*Required</label>
-                    <input
-                        placeholder="Date"
-                        name="date"
-                        type="text"
-                        id="date"
-                        required
-                    />
+                    {/* DatePicker code */}
+                    <DatePicker selected={startDate} onChange={(date) => setDate(date)} />
                 </div>
                 <div className="flex-row space-between my-2">
                     <label htmlFor="date">Time</label>
