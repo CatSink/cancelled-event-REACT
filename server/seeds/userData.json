@@ -1,0 +1,42 @@
+[
+  {
+    "username": "catsink",
+    "email": "catsink@email.com",
+    "password": "password1",
+    "friends": [
+
+    ]
+  },
+  {
+    "username": "jaimemarsh",
+    "email": "jaimemarsh@email.com",
+    "password": "password2",
+    "friends": [
+
+    ]
+  },
+  {
+    "username": "janiecelewis",
+    "email": "janiecelewis@email.com",
+    "password": "password3",
+    "friends": [
+
+    ]
+  },
+  {
+    "username": "sofiemilillo",
+    "email": "sofiemilillo@email.com",
+    "password": "password4",
+    "friends": [
+
+    ]
+  },
+  {
+    "username": "stephsimms",
+    "email": "stephaniesimmons@email.com",
+    "password": "password5",
+    "friends": [
+
+    ]
+  }
+]
