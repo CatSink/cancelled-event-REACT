@@ -31,6 +31,7 @@ function App() {
               path="/matchup/:id" 
               element={<Vote />}
             /> */}
+            
             <Route
               path="/Login"
               element={<Login />}
@@ -46,7 +47,10 @@ function App() {
           </Routes>
         </div>
       </Router>
+      
+
     </ApolloProvider>
+    
   );
 }
 
