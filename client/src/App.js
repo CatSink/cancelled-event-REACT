@@ -2,8 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Home from './pages/Home';
-// import Matchup from './pages/Matchup';
-// import Vote from './pages/Vote';
+import Login from '../src/pages/Login';
+import Signup from '../src/pages/Signup';
+import Invite from '../src/pages/createInvite';
+import LoggedIn from '../src/pages/userHome'
+import CreatedEvents from '../src/pages/userInvites'
 import NotFound from './pages/NotFound';
 
 const client = new ApolloClient({
@@ -17,19 +20,35 @@ function App() {
       <Router>
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
           <Routes>
-            <Route 
-              path="/" 
+            <Route
+              path="/userHome"
+              element={<LoggedIn />}
+            />
+            <Route
+              path="/userInvites"
+              element={<CreatedEvents />}
+            />
+            <Route
+              path="/"
               element={<Home />}
             />
-            {/* <Route 
-              path="/matchup" 
-              element={<Matchup />}
+            <Route
+              path="/createInvite"
+              element={<Invite />}
             />
-            <Route 
-              path="/matchup/:id" 
-              element={<Vote />}
-            /> */}
-            <Route 
+            <Route
+              path="/Login"
+              element={<Login />}
+            />
+            <Route
+              path="/Signup"
+              element={<Signup />}
+            />
+            <Route
+              path="/Home"
+              element={<Home />}
+            />
+            <Route
               path="*"
               element={<NotFound />}
             />
