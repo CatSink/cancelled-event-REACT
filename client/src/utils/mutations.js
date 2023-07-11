@@ -29,3 +29,14 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const CREATE_EVENT = gql`
+  mutation createEvent($event: EventData) {
+    createEvent(event: $event) {
+      success
+      event {
+        id
+      }
+    }
+  }
+`;

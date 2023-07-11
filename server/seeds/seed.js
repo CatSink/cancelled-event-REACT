@@ -6,14 +6,11 @@ const userData = require('./userData.json');
 
 db.once('open', async () => {
   try {
+    console.log(userData)
     // await Event.deleteMany({});
     await User.deleteMany({});
 
-    await User.create(userData);
-
-    // for (let i = 0; i < thoughtSeeds.length; i++) {
-    //   const { _id, thoughtAuthor } = await Thought.create(thoughtSeeds[i]);
-    //   const user = await User.findOneAndUpdate(
+    await User.insertMany(userData)
     //     { username: thoughtAuthor },
     //     {
     //       $addToSet: {
