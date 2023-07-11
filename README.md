@@ -1,4 +1,5 @@
 # cancelled-event-REACT
+![Screenshot 2023-07-09 at 5 40 52 PM](https://github.com/CatSink/cancelled-event-REACT/assets/121777930/a37fb8d4-23bb-49a1-ac3f-a57a20b47f69)
 
 ## Description
 
@@ -10,8 +11,6 @@ This project is a collaborative MERN full-stack application. The Cancelled appli
 - What did you learn?
 
 ## Table of Contents
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -32,10 +31,11 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ## Credits
 
-Soffia Milillo <>
-Jaime Marsh<>
-Stephanie Simmons <>
-Janiece Lewis <>
+[Catherine Sinkowski](https://github.com/CatSink) <br>
+[Sofie Milillo](https://github.com/smilillo) <br>
+[Jaime Marsh](https://github.com/jaimemarsh) <br>
+[Stephanie Simmons](https://github.com/ssimmons122) <br>
+[Janiece Lewis](https://github.com/Janiece-Lewis) <br>
 
 ## License
 
