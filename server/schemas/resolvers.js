@@ -48,7 +48,17 @@ const resolvers = {
 
       return { token, user };
     },
-    addEvent: async (parent, {  }, context) => {
+    addEvent: async (parent, { 
+      eventInvitees,
+      eventDate,
+      eventTime, 
+      eventLocation,
+      eventOutfit,
+      eventPrice,
+      eventCancelWindow,
+      eventMessage, 
+      eventCreator
+    }, context) => {
       if (context.user) {
         const event = await Event.create({
           eventInvitees,
