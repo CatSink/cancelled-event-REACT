@@ -1,47 +1,32 @@
 const { Schema, model } = require('mongoose');
 
 const eventSchema = new Schema({
-  eventTitle: {
+  eventInvitees: {
     type: String,
-    required: 'Give your plans a name!',
-    minlength: 1,
-    maxlength: 280,
-    trim: true,
+    required: true
   },
-  eventDescription: {
+  eventDate: {
     type: String,
-    required: 'Let your friend(s) know the plan!',
-    minlength: 1,
-    maxlength: 280,
-    trim: true,
+    required: true
   },
-  eventCreator: {
-    type: Schema.Types.ObjectId,
-    ref: 'User'
+  eventTime: {
+    type: String,
+  },
+  eventLocation: {
+    type: String
+  },
+  eventOutfit: {
+    type: String
+  },
+  eventPrice: {
+    type: String
+  },
+  eventCancelWindow: {
+    type: String
+  },
+  eventMessage: {
+    type: String
   }
-  // invitees: {
-  //   type: String,
-  //   required: true,
-  // },
-  // eventDate: {
-  //   required: true,
-  // },
-  // eventLocation: {
-  //   required: true,
-  // },
-  // outfitDescription: {
-
-  // },
-  // priceRange: {
-
-  // },
-  // cancellationWindow: {
-
-  // },
-  // message: {
-  //   type: String,
-    
-  // }
 });
 
 const Event = model('Event', eventSchema);

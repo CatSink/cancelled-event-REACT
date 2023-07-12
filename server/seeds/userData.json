@@ -1,6 +1,7 @@
 [
   {
-    "username": "catsink",
+    "firstName": "Catherine",
+    "lastName": "Sinkowski",
     "email": "catsink@email.com",
     "password": "password1",
     "friends": [
@@ -8,7 +9,8 @@
     ]
   },
   {
-    "username": "jaimemarsh",
+    "firstName": "Jaime",
+    "lastName": "Marsh",
     "email": "jaimemarsh@email.com",
     "password": "password2",
     "friends": [
@@ -16,7 +18,8 @@
     ]
   },
   {
-    "username": "janiecelewis",
+    "firstName": "Janiece",
+    "lastName": "Lewis",
     "email": "janiecelewis@email.com",
     "password": "password3",
     "friends": [
@@ -24,7 +27,8 @@
     ]
   },
   {
-    "username": "sofiemilillo",
+    "firstName": "Sofie",
+    "lastName": "Milillo",
     "email": "sofiemilillo@email.com",
     "password": "password4",
     "friends": [
@@ -32,7 +36,8 @@
     ]
   },
   {
-    "username": "stephsimms",
+    "firstName": "Stephanie",
+    "lastName": "Simmons",
     "email": "stephaniesimmons@email.com",
     "password": "password5",
     "friends": [
