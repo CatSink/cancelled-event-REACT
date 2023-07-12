@@ -21,11 +21,6 @@ const typeDefs = gql`
     eventMessage: String
   }
 
-  type eventResponse {
-    success: Boolean
-    event: Event
-  }
-
   type Auth {
     token: ID!
     user: User
@@ -42,7 +37,16 @@ const typeDefs = gql`
   type Mutation {
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addEvent(eventInvitees: String, eventDate: String): eventResponse
+    addEvent(
+      eventInvitees: String, 
+      eventDate: String, 
+      eventTime: String,
+      eventLocation: String,
+      eventOutfit: String,
+      eventPrice: String,
+      eventCancelWindow: String,
+      eventMessage: String
+      ): Event
   }
 `;
 
