@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function CreatedEvents() {
 
     return (
-        <div className="container my-1">
+        <div className="container my-1 className='bg-black ">
             <Link to="/userHome">←Back to Home</Link>
             <Greeting />
             <div className="text-center">

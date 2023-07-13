@@ -5,6 +5,7 @@ import DatePicker from 'react-datepicker'
 import {ADD_EVENT} from '../utils/mutations'
 import {useMutation} from '@apollo/client'
 import 'react-datepicker/dist/react-datepicker.css';
+// import FriendAvatar from '../components/Avatar';
 
 function Invite() {
     // const [selectedUsers, setSelectedUsers] = useState([]);
@@ -73,41 +74,67 @@ function Invite() {
 
 
     return (
-        <div className="container my-1">
-            <Link to="/userHome">← Back to Home</Link>
-            <Greeting />
-            <h2>Create Plans</h2>
-            <p>To create plans please select the Who When and Where with our pre-selected options. The rest of the options are not required, but does help your friends when making the plans!</p>
 
-            <form onSubmit={handleSubmit}>
-                <div className="flex-row space-between my-2">
-                    <label htmlFor="getUsers"><strong>Who</strong> are you inviting?</label>
-                    <label>*Required</label>
-                    <select
+
+        <div className="grid grid-cols-1 md:grid-cols-2 w-full p-10 my-1 bg-gradient-to-l from-purple-900  from-10% via-purple-500 via-90% to-purple-500 to-30% min-h-screen">
+
+            <div className='icon-container'>
+                {/* signout icon */}
+                <div className='flex'>
+                    <Link className='p-0 font-mono text-white justify-center' to="/"><i class="fa-solid fa-arrow-right-from-bracket fa-lg"></i>
+
+                    </Link>
+                    
+                        {/* user-icon to userhome */}
+                        <Link className=" ml-5 text-white" to="/userHome"><i class="fa-regular fa-user fa-lg"></i>
+                            {/* <Greeting /> */}
+                        </Link>
+                   
+                </div>
+
+
+
+            </div>
+            <div className='flex'>
+                <h2 className=" justify-center mt-1 ml-24 text-center text-2xl font-bold leading-9 tracking-tight text-white">Create Some Plans</h2>
+            </div>
+
+            <div className='className="flex flex-col  justify-center items-center'>
+                <img className='mt-8 mr-15' src='./images/calender.svg' />
+
+            </div>
+
+            <form className="w-1/2 text-purple-800 bg-transparent pl-20 m-5 block h-screen" onSubmit={handleSubmit}>
+                <div className="flex-row space-between my-4">
+                    <label htmlFor="getUsers"></label>
+                    {/* <label className='block font-bold text-pink-300 p-1'>*Required</label> */}
+                    <select className='rounded-lg'
                         id="getUsers"
                         name="eventInvitees"
                         value={formState.eventInvitees}
                         onChange={handleSelectChange}
                         required
                     >
-                        <option value="">Select Your Friends</option>
-                        <option value="user1">Option 1</option>
-                        <option value="user2">Option 2</option>
-                        <option value="user3">Option 3</option>
-                        {/* Add more options as needed */}
+                        <option value="">Who do you want to invite?</option>
+                        <option value="user1">Alex</option>
+                        <option value="user2">Kim</option>
+                        <option value="user3">Rob</option>
+                        {/* Add more options as needed*/}
+
                     </select>
+
                 </div>
-                <label><strong>When</strong></label>
-                <div className="flex-row space-between my-2">
-                    <label htmlFor="date">Date</label>
-                    <label>*Required</label>
+
+                <div className="block flex-row space-between my-4">
+                    {/* <label htmlFor="date">When</label> */}
+                    {/* <label className='font-bold text-pink-300 p-1'>*Required</label> */}
                     {/* DatePicker code */}
-                    <DatePicker selected={formState.eventDate} onChange={(date) => setDate(date)} />
+                    <DatePicker className='rounded-lg' selected={startDate} onChange={(date) => setDate(date)} />
                 </div>
-                <div className="flex-row space-between my-2">
-                    <label htmlFor="date">Time</label>
-                    <label>*Required</label>
-                    <input
+                <div className="flex-row space-between my-2 rounded-lg">
+                    {/* <label htmlFor="date">Time</label> */}
+                    {/* <label  className='block font-bold text-pink-300 p-1'>*Required</label> */}
+                    <input className='block rounded-lg'
                         placeholder="Time"
                         name="eventTime"
                         value={formState.eventTime}
@@ -118,10 +145,10 @@ function Invite() {
                     />
                 </div>
 
-                <div className="flex-row space-between my-2">
-                    <label htmlFor="address"><strong>Where</strong> are you going?</label>
-                    <label>*Required</label>
-                    <select
+                <div className="flex-row space-between my-4">
+                    {/* <label htmlFor="address"><strong>Where</strong> are you going?</label> */}
+                    {/* <label  className='block font-bold text-pink-300 p-1'>*Required</label> */}
+                    <select className='rounded-lg'
                         id="getLocations"
                         name="eventLocation"
                         value={formState.eventLocation}
@@ -136,9 +163,9 @@ function Invite() {
                     </select>
                 </div>
 
-                <div className="flex-row space-between my-2">
-                    <label htmlFor="fit">The Fit</label>
-                    <select
+                <div className="flex-row space-between my-4">
+                    {/* <label htmlFor="fit">The Fit</label> */}
+                    <select className='rounded-lg'
                         id="getFit"
                         name="eventOutfit"
                         value={formState.eventOutfit}
@@ -151,9 +178,9 @@ function Invite() {
                         {/* Add more options as needed */}
                     </select>
                 </div>
-                <div className="flex-row space-between my-2">
-                    <label htmlFor="price">Price Range</label>
-                    <select
+                <div className="flex-row space-between my-4">
+                    {/* <label htmlFor="price">Price Range</label> */}
+                    <select className='rounded-lg'
                         id="getPrice"
                         name="eventPrice"
                         value={formState.eventPrice}
@@ -166,24 +193,24 @@ function Invite() {
                         {/* Add more options as needed */}
                     </select>
                 </div>
-                <div className="flex-row space-between my-2">
-                    <label htmlFor="cancelTime">When is too late to cancel</label>
-                    <select
+                <div className="flex-row space-between my-4">
+                    {/* <label htmlFor="cancelTime">When is too late to cancel</label> */}
+                    <select className='rounded-lg'
                         id="getCancelTime"
                         name="eventCancelWindow"
                         value={formState.eventCancelWindow}
                         onChange={handleSelectChange}
                     >
-                        <option value="">Select a time</option>
+                        <option value="">Cancel Deadline</option>
                         <option value="cancel1">30min before</option>
                         <option value="cancel2">Day before</option>
                         <option value="cancel3">Never too late</option>
                         {/* Add more options as needed */}
                     </select>
                 </div>
-                <div className="flex-row space-between my-2">
-                    <label htmlFor="message">Quick Message</label>
-                    <textarea
+                <div className="flex-row space-between my-4">
+                    {/* <label htmlFor="message">Quick Message</label> */}
+                    <textarea className='rounded-lg'
                         placeholder="Write a message to your friends"
                         type="text"
                         name="eventMessage"
@@ -193,10 +220,14 @@ function Invite() {
                 </div>
 
                 <div className="flex-row flex-end">
-                    <button type="submit">Send</button>
+                    <button className="rounded-full w-40 h-10 leading-none  bg-black hover:bg-purple-400   font-mono text-white" type="submit"><i class="fa-regular fa-envelope"></i> Send</button>
                 </div>
             </form>
+            
+           
+
         </div >
+
     );
 }
 
