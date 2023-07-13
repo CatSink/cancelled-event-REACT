@@ -55,7 +55,7 @@ function Signup(props) {
           <input className='w-1/2 block border-2 border-gray-300 rounded-lg bg-transparent text-white'
             placeholder="First"
             name="firstName"
-            type="text"
+            type="firstName"
             id="firstName"
             onChange={handleChange}
           />
@@ -65,7 +65,7 @@ function Signup(props) {
           <input className='w-1/2 block border-2 border-gray-300 rounded-lg bg-transparent text-white'
             placeholder="Last"
             name="lastName"
-            type="text"
+            type="lastName"
             id="lastName"
             onChange={handleChange}
           />
