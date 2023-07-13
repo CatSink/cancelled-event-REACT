@@ -2,51 +2,74 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Greeting from './greeting'
 import DatePicker from 'react-datepicker'
+import {ADD_EVENT} from '../utils/mutations'
+import {useMutation} from '@apollo/client'
 import 'react-datepicker/dist/react-datepicker.css';
 // import FriendAvatar from '../components/Avatar';
 
 function Invite() {
-    const [selectedUsers, setSelectedUsers] = useState([]);
-    const [selectedLocation, setSelectedLocation] = useState('');
-    const [selectedFit, setSelectedFit] = useState('');
-    const [selectedPrice, setSelectedPrice] = useState('');
-    const [selectedCancelTime, setSelectedCancelTime] = useState('');
-    const [message, setMessage] = useState('');
+    // const [selectedUsers, setSelectedUsers] = useState([]);
+    // const [selectedLocation, setSelectedLocation] = useState('');
+    // const [selectedFit, setSelectedFit] = useState('');
+    // const [selectedPrice, setSelectedPrice] = useState('');
+    // const [selectedCancelTime, setSelectedCancelTime] = useState('');
+    // const [message, setMessage] = useState('');
+    const [addEvent] = useMutation(ADD_EVENT);
 
     //Datepicker code
     const [startDate, setDate] = useState(new Date());
 
+    const [formState, setFormState] = useState({ eventInvitees: '', eventDate: '', eventTime: '', eventLocation: '', eventOutfit: '', 
+    eventPrice: '', eventCancelWindow: '', eventMessage: '' });
+
+
 
     const handleSelectChange = (e) => {
-        const { id, value } = e.target;
-        switch (id) {
-            case 'getUsers':
-                setSelectedUsers(Array.from(e.target.selectedOptions, (option) => option.value));
-                break;
-            case 'getLocations':
-                setSelectedLocation(value);
-                break;
-            case 'getFit':
-                setSelectedFit(value);
-                break;
-            case 'getPrice':
-                setSelectedPrice(value);
-                break;
-            case 'getCancelTime':
-                setSelectedCancelTime(value);
-                break;
-            default:
-                break;
-        }
+        const { name, value } = e.target;
+        setFormState({ ...formState, [name]: value })
+        // switch (id) {
+        //     case 'getUsers':
+        //         setSelectedUsers(Array.from(e.target.selectedOptions, (option) => option.value));
+        //         break;
+        //     case 'getLocations':
+        //         setSelectedLocation(value);
+        //         break;
+        //     case 'getFit':
+        //         setSelectedFit(value);
+        //         break;
+        //     case 'getPrice':
+        //         setSelectedPrice(value);
+        //         break;
+        //     case 'getCancelTime':
+        //         setSelectedCancelTime(value);
+        //         break;
+        //     default:
+        //         break;
+        // }
     };
 
-    const handleMessageChange = (e) => {
-        setMessage(e.target.value);
-    };
+    // const handleMessageChange = (e) => {
+    //     setMessage(e.target.value);
+    // };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle form submission
+        console.log(formState);
+        const mutationResponse = await addEvent({
+            variables: {
+            eventInvitees: formState.eventInvitees,
+            eventDate: formState.eventDate,
+            eventTime: formState.eventTime,
+            eventLocation: formState.eventLocation,
+            eventOutfit: formState.eventOutfit,
+            eventPrice: formState.eventPrice,
+            eventCancelWindow: formState.eventCancelWindow,
+            eventMessage: formState.eventMessage
+            },
+        });
+        // const token = mutationResponse.data.addEvent.token;
+        // Auth.login(token);
+        // };
     };
 
 
@@ -87,7 +110,8 @@ function Invite() {
                     {/* <label className='block font-bold text-pink-300 p-1'>*Required</label> */}
                     <select className='rounded-lg'
                         id="getUsers"
-                        value={selectedUsers}
+                        name="eventInvitees"
+                        value={formState.eventInvitees}
                         onChange={handleSelectChange}
                         required
                     >
@@ -112,7 +136,9 @@ function Invite() {
                     {/* <label  className='block font-bold text-pink-300 p-1'>*Required</label> */}
                     <input className='block rounded-lg'
                         placeholder="Time"
-                        name="date"
+                        name="eventTime"
+                        value={formState.eventTime}
+                        onChange={handleSelectChange}
                         type="text"
                         id="date"
                         required
@@ -124,7 +150,8 @@ function Invite() {
                     {/* <label  className='block font-bold text-pink-300 p-1'>*Required</label> */}
                     <select className='rounded-lg'
                         id="getLocations"
-                        value={selectedLocation}
+                        name="eventLocation"
+                        value={formState.eventLocation}
                         onChange={handleSelectChange}
                         required
                     >
@@ -140,7 +167,8 @@ function Invite() {
                     {/* <label htmlFor="fit">The Fit</label> */}
                     <select className='rounded-lg'
                         id="getFit"
-                        value={selectedFit}
+                        name="eventOutfit"
+                        value={formState.eventOutfit}
                         onChange={handleSelectChange}
                     >
                         <option value="">Select Your Outfit</option>
@@ -154,7 +182,8 @@ function Invite() {
                     {/* <label htmlFor="price">Price Range</label> */}
                     <select className='rounded-lg'
                         id="getPrice"
-                        value={selectedPrice}
+                        name="eventPrice"
+                        value={formState.eventPrice}
                         onChange={handleSelectChange}
                     >
                         <option value="">Select Your Price Range</option>
@@ -168,7 +197,8 @@ function Invite() {
                     {/* <label htmlFor="cancelTime">When is too late to cancel</label> */}
                     <select className='rounded-lg'
                         id="getCancelTime"
-                        value={selectedCancelTime}
+                        name="eventCancelWindow"
+                        value={formState.eventCancelWindow}
                         onChange={handleSelectChange}
                     >
                         <option value="">Cancel Deadline</option>
@@ -182,8 +212,10 @@ function Invite() {
                     {/* <label htmlFor="message">Quick Message</label> */}
                     <textarea className='rounded-lg'
                         placeholder="Write a message to your friends"
-                        value={message}
-                        onChange={handleMessageChange}
+                        type="text"
+                        name="eventMessage"
+                        value={formState.eventMessage}
+                        onChange={handleSelectChange}
                     />
                 </div>
 

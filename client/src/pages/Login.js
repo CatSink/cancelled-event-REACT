@@ -20,6 +20,7 @@ function Login(props) {
       });
       const token = mutationResponse.data.login.token;
       Auth.login(token);
+      document.location.replace("/userHome")
     } catch (e) {
       console.log(e);
     }
