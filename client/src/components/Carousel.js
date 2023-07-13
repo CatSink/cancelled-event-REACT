@@ -12,6 +12,10 @@ const MyCarousel = () => {
         alt="..."
         src="../../images/phone1.png"
       />
+       <img
+        alt="..."
+        src="../../images/flower.png"
+      />
       <img
         alt="..."
         src="../../images/sports2.png"
@@ -22,12 +26,16 @@ const MyCarousel = () => {
       />
       <img
         alt="..."
-        src="../../images/workout.png"
+        src="../../images/pizzaa.png"
       />
+     
       <img
         alt="..."
-        src="../../images/flower.png"
+        src="../../images/beer.png"
+        
       />
+      
+
     </Carousel>
     
   )

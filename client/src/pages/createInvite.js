@@ -53,21 +53,17 @@ function Invite() {
     return (
 
 
-        <div className="grid grid-cols-1 md:grid-cols-2 w-full p-8 my-1 bg-gradient-to-l from-purple-900  from-10% via-purple-500 via-90% to-purple-500 to-30% h-screen">
+        <div className="grid grid-cols-1 md:grid-cols-2 w-full p-10 my-1 bg-gradient-to-l from-purple-900  from-10% via-purple-500 via-90% to-purple-500 to-30% min-h-screen">
 
             <div className='icon-container'>
                 {/* signout icon */}
                 <div className='flex'>
-                    <Link className='p-0 font-mono text-white justify-center' to="/"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
-                    </svg>
+                    <Link className='p-0 font-mono text-white justify-center' to="/"><i class="fa-solid fa-arrow-right-from-bracket fa-lg"></i>
 
                     </Link>
                     
                         {/* user-icon to userhome */}
-                        <Link className=" p-0 text-white" to="/userHome"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                        </svg>
+                        <Link className=" ml-5 text-white" to="/userHome"><i class="fa-regular fa-user fa-lg"></i>
                             {/* <Greeting /> */}
                         </Link>
                    
@@ -77,7 +73,7 @@ function Invite() {
 
             </div>
             <div className='flex'>
-                <h2 className=" justify-center mt-1 text-center text-2xl font-bold leading-9 tracking-tight text-white">Create Plans</h2>
+                <h2 className=" justify-center mt-1 ml-24 text-center text-2xl font-bold leading-9 tracking-tight text-white">Create Some Plans</h2>
             </div>
 
             <div className='className="flex flex-col  justify-center items-center'>
@@ -192,11 +188,7 @@ function Invite() {
                 </div>
 
                 <div className="flex-row flex-end">
-                    <button className="rounded-full w-40 h-10 leading-none  bg-black hover:bg-purple-400   font-mono text-white" type="submit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-7 h-7 pl-3">
-                        <path d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.162V6a2 2 0 00-2-2H3z" />
-                        <path d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z" />
-                    </svg>
-                        Send</button>
+                    <button className="rounded-full w-40 h-10 leading-none  bg-black hover:bg-purple-400   font-mono text-white" type="submit"><i class="fa-regular fa-envelope"></i> Send</button>
                 </div>
             </form>
             
