@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Greeting from './greeting'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css';
+// import FriendAvatar from '../components/Avatar';
 
 function Invite() {
     const [selectedUsers, setSelectedUsers] = useState([]);
@@ -50,40 +51,70 @@ function Invite() {
 
 
     return (
-        <div className="container my-1">
-            <Link to="/userHome">← Back to Home</Link>
-            <Greeting />
-            <h2>Create Plans</h2>
-            <p>To create plans please select the Who When and Where with our pre-selected options. The rest of the options are not required, but does help your friends when making the plans!</p>
 
-            <form onSubmit={handleSubmit}>
-                <div className="flex-row space-between my-2">
-                    <label htmlFor="getUsers"><strong>Who</strong> are you inviting?</label>
-                    <label>*Required</label>
-                    <select
+
+        <div className="grid grid-cols-1 md:grid-cols-2 w-full p-8 my-1 bg-gradient-to-l from-purple-900  from-10% via-purple-500 via-90% to-purple-500 to-30% h-screen">
+
+            <div className='icon-container'>
+                {/* signout icon */}
+                <div className='flex'>
+                    <Link className='p-0 font-mono text-white justify-center' to="/"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
+                    </svg>
+
+                    </Link>
+                    
+                        {/* user-icon to userhome */}
+                        <Link className=" p-0 text-white" to="/userHome"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                        </svg>
+                            {/* <Greeting /> */}
+                        </Link>
+                   
+                </div>
+
+
+
+            </div>
+            <div className='flex'>
+                <h2 className=" justify-center mt-1 text-center text-2xl font-bold leading-9 tracking-tight text-white">Create Plans</h2>
+            </div>
+
+            <div className='className="flex flex-col  justify-center items-center'>
+                <img className='mt-8 mr-15' src='./images/calender.svg' />
+
+            </div>
+
+            <form className="w-1/2 text-purple-800 bg-transparent pl-20 m-5 block h-screen" onSubmit={handleSubmit}>
+                <div className="flex-row space-between my-4">
+                    <label htmlFor="getUsers"></label>
+                    {/* <label className='block font-bold text-pink-300 p-1'>*Required</label> */}
+                    <select className='rounded-lg'
                         id="getUsers"
                         value={selectedUsers}
                         onChange={handleSelectChange}
                         required
                     >
-                        <option value="">Select Your Friends</option>
-                        <option value="user1">Option 1</option>
-                        <option value="user2">Option 2</option>
-                        <option value="user3">Option 3</option>
-                        {/* Add more options as needed */}
+                        <option value="">Who do you want to invite?</option>
+                        <option value="user1">Alex</option>
+                        <option value="user2">Kim</option>
+                        <option value="user3">Rob</option>
+                        {/* Add more options as needed*/}
+
                     </select>
+
                 </div>
-                <label><strong>When</strong></label>
-                <div className="flex-row space-between my-2">
-                    <label htmlFor="date">Date</label>
-                    <label>*Required</label>
+
+                <div className="block flex-row space-between my-4">
+                    {/* <label htmlFor="date">When</label> */}
+                    {/* <label className='font-bold text-pink-300 p-1'>*Required</label> */}
                     {/* DatePicker code */}
-                    <DatePicker selected={startDate} onChange={(date) => setDate(date)} />
+                    <DatePicker className='rounded-lg' selected={startDate} onChange={(date) => setDate(date)} />
                 </div>
-                <div className="flex-row space-between my-2">
-                    <label htmlFor="date">Time</label>
-                    <label>*Required</label>
-                    <input
+                <div className="flex-row space-between my-2 rounded-lg">
+                    {/* <label htmlFor="date">Time</label> */}
+                    {/* <label  className='block font-bold text-pink-300 p-1'>*Required</label> */}
+                    <input className='block rounded-lg'
                         placeholder="Time"
                         name="date"
                         type="text"
@@ -92,10 +123,10 @@ function Invite() {
                     />
                 </div>
 
-                <div className="flex-row space-between my-2">
-                    <label htmlFor="address"><strong>Where</strong> are you going?</label>
-                    <label>*Required</label>
-                    <select
+                <div className="flex-row space-between my-4">
+                    {/* <label htmlFor="address"><strong>Where</strong> are you going?</label> */}
+                    {/* <label  className='block font-bold text-pink-300 p-1'>*Required</label> */}
+                    <select className='rounded-lg'
                         id="getLocations"
                         value={selectedLocation}
                         onChange={handleSelectChange}
@@ -109,9 +140,9 @@ function Invite() {
                     </select>
                 </div>
 
-                <div className="flex-row space-between my-2">
-                    <label htmlFor="fit">The Fit</label>
-                    <select
+                <div className="flex-row space-between my-4">
+                    {/* <label htmlFor="fit">The Fit</label> */}
+                    <select className='rounded-lg'
                         id="getFit"
                         value={selectedFit}
                         onChange={handleSelectChange}
@@ -123,9 +154,9 @@ function Invite() {
                         {/* Add more options as needed */}
                     </select>
                 </div>
-                <div className="flex-row space-between my-2">
-                    <label htmlFor="price">Price Range</label>
-                    <select
+                <div className="flex-row space-between my-4">
+                    {/* <label htmlFor="price">Price Range</label> */}
+                    <select className='rounded-lg'
                         id="getPrice"
                         value={selectedPrice}
                         onChange={handleSelectChange}
@@ -137,23 +168,23 @@ function Invite() {
                         {/* Add more options as needed */}
                     </select>
                 </div>
-                <div className="flex-row space-between my-2">
-                    <label htmlFor="cancelTime">When is too late to cancel</label>
-                    <select
+                <div className="flex-row space-between my-4">
+                    {/* <label htmlFor="cancelTime">When is too late to cancel</label> */}
+                    <select className='rounded-lg'
                         id="getCancelTime"
                         value={selectedCancelTime}
                         onChange={handleSelectChange}
                     >
-                        <option value="">Select a time</option>
+                        <option value="">Cancel Deadline</option>
                         <option value="cancel1">30min before</option>
                         <option value="cancel2">Day before</option>
                         <option value="cancel3">Never too late</option>
                         {/* Add more options as needed */}
                     </select>
                 </div>
-                <div className="flex-row space-between my-2">
-                    <label htmlFor="message">Quick Message</label>
-                    <textarea
+                <div className="flex-row space-between my-4">
+                    {/* <label htmlFor="message">Quick Message</label> */}
+                    <textarea className='rounded-lg'
                         placeholder="Write a message to your friends"
                         value={message}
                         onChange={handleMessageChange}
@@ -161,10 +192,18 @@ function Invite() {
                 </div>
 
                 <div className="flex-row flex-end">
-                    <button type="submit">Send</button>
+                    <button className="rounded-full w-40 h-10 leading-none  bg-black hover:bg-purple-400   font-mono text-white" type="submit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-7 h-7 pl-3">
+                        <path d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.162V6a2 2 0 00-2-2H3z" />
+                        <path d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z" />
+                    </svg>
+                        Send</button>
                 </div>
             </form>
+            
+           
+
         </div >
+
     );
 }
 
