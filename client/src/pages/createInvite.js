@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Greeting from './greeting'
+import Auth from '../utils/auth';
 import DatePicker from 'react-datepicker'
 import {ADD_EVENT} from '../utils/mutations'
 import {useMutation} from '@apollo/client'
@@ -8,12 +9,6 @@ import 'react-datepicker/dist/react-datepicker.css';
 // import FriendAvatar from '../components/Avatar';
 
 function Invite() {
-    // const [selectedUsers, setSelectedUsers] = useState([]);
-    // const [selectedLocation, setSelectedLocation] = useState('');
-    // const [selectedFit, setSelectedFit] = useState('');
-    // const [selectedPrice, setSelectedPrice] = useState('');
-    // const [selectedCancelTime, setSelectedCancelTime] = useState('');
-    // const [message, setMessage] = useState('');
     const [addEvent] = useMutation(ADD_EVENT);
 
     //Datepicker code
@@ -27,33 +22,14 @@ function Invite() {
     const handleSelectChange = (e) => {
         const { name, value } = e.target;
         setFormState({ ...formState, [name]: value })
-        // switch (id) {
-        //     case 'getUsers':
-        //         setSelectedUsers(Array.from(e.target.selectedOptions, (option) => option.value));
-        //         break;
-        //     case 'getLocations':
-        //         setSelectedLocation(value);
-        //         break;
-        //     case 'getFit':
-        //         setSelectedFit(value);
-        //         break;
-        //     case 'getPrice':
-        //         setSelectedPrice(value);
-        //         break;
-        //     case 'getCancelTime':
-        //         setSelectedCancelTime(value);
-        //         break;
-        //     default:
-        //         break;
-        // }
     };
 
     // const handleMessageChange = (e) => {
     //     setMessage(e.target.value);
     // };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    const handleSubmit = async (event) => {
+        event.preventDefault();
         console.log(formState);
         const mutationResponse = await addEvent({
             variables: {
@@ -67,9 +43,8 @@ function Invite() {
             eventMessage: formState.eventMessage
             },
         });
-        // const token = mutationResponse.data.addEvent.token;
-        // Auth.login(token);
-        // };
+        const token = mutationResponse.data.addEvent.token;
+        Auth.login(token);
     };
 
 

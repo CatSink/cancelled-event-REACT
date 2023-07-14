@@ -46,7 +46,7 @@ const typeDefs = gql`
       eventPrice: String,
       eventCancelWindow: String,
       eventMessage: String
-      ): Event
+      ): Auth
   }
 `;
 
