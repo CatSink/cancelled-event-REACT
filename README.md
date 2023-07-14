@@ -3,31 +3,40 @@
 
 ## Description
 
+Canceling plans has always been a source of anxiety, even when both sides don’t want to go. Our application is made with cancelling in mind. 
+
+We wanted a way to Cancel plans with a group, or even with one friend, that isn’t weird or hard. We also wanted an easier way to make plans more detailed so people know not just where to go and when, but things like what to wear and how much money the group is planning to spend.
+
 This project is a collaborative MERN full-stack application. The Cancelled application provides a simple way to create and plan events and invites, and shamelessly cancel if things change.
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+Let’s say you made plans to go out with a friend, but the day of you’re in bed and realize you just want to stay there. You can hit cancel on your plans without the other person ever knowing you want to cancel. BUT if they also hit cancel, the plans are then officially cancelled and both friends are notified.
 
 ## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Tests](#tests)
+- [Contributing](#contributing)
 - [Credits](#credits)
 - [License](#license)
 
 ## Installation
 
-You can install Node.js and clone this repository to your local machine. To run on the localhost `npm install`, and `npm run develop`.
+You can install Node.js and clone this repository to your local machine. To run on the localhost `npm install`, and `npm run develop`. The application can also be used on the browser or downloaded to your local machine to use as a PWA from browser.
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
-
 ![alt text](assets/images/screenshot.png)
+
+### Deployed Webpage
+
+## Tests
+
+N/A
+
+## Contributing
+
+If you would like to contribute to this application, please reach out to any of us via email or GitHub! Feel free to create a PR/Issue for any suggestions/improvements.
 
 ## Credits
 
@@ -42,42 +51,3 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 MIT License
 
 Copyright (c) [2023] [Catherine-Sinkowski]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-
-Badges aren't necessary, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## Features
-
-If your project has a lot of features, list them here.
-
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute to it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
-Now fill in the details as much as you can, referring to the following tips as you go:
-
-Remember that # in markdown is the top-level header, which is typically the title of the page. You can create your own title. For our example purposes, we will use “Prework Study Guide Webpage”.
