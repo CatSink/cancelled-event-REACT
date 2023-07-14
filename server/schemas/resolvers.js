@@ -58,7 +58,7 @@ const resolvers = {
       eventPrice,
       eventCancelWindow,
       eventMessage, 
-      eventCreator
+      // eventCreator
     }, context) => {
       if (context.user) {
         const event = await Event.create({
@@ -70,7 +70,7 @@ const resolvers = {
           eventPrice,
           eventCancelWindow,
           eventMessage,
-          eventCreator: context.user.email,
+          // eventCreator: context.user.email,
         });
 
         await User.findOneAndUpdate(
