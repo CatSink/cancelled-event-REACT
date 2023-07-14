@@ -1,15 +1,11 @@
 # cancelled-event-REACT
+
 ![Screenshot 2023-07-09 at 5 40 52 PM](https://github.com/CatSink/cancelled-event-REACT/assets/121777930/a37fb8d4-23bb-49a1-ac3f-a57a20b47f69)
 
 ## Description
 
 This project is a collaborative MERN full-stack application. The Cancelled application provides a simple way to create and plan events and invites, and shamelessly cancel if things change.
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
-
+The project includes MongoDB, Express, React, GraphQL and Apollo Server, check out the package.json for more details on specific libraries used. We wanted to create an application that makes it easy to connect with friends for various events and share details of plans and committment level. We had some challenges that we will continue to resolve. Stay tuned for updates.
 ## Table of Contents
 
 - [Installation](#installation)
@@ -23,11 +19,9 @@ You can install Node.js and clone this repository to your local machine. To run 
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+Create a profile on the Sign Up page to start adding friends and creating events. Once logged in you can create events, add friends, or cancel plans. You can view a demo here <https://watch.screencastify.com/v/LcRht9Tip9a2yeuFWeSN>
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
-
-![alt text](assets/images/screenshot.png)
+![home-page](assets/CancelledSS.jpg)
 
 ## Credits
 
@@ -60,24 +54,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-
-Badges aren't necessary, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## Features
-
-If your project has a lot of features, list them here.
-
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute to it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
-Now fill in the details as much as you can, referring to the following tips as you go:
-
-Remember that # in markdown is the top-level header, which is typically the title of the page. You can create your own title. For our example purposes, we will use “Prework Study Guide Webpage”.
