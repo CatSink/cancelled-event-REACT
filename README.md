@@ -1,4 +1,4 @@
-# cancelled-event-REACT
+# cancelled-with-REACT
 
 ![Screenshot 2023-07-09 at 5 40 52 PM](https://github.com/CatSink/cancelled-event-REACT/assets/121777930/a37fb8d4-23bb-49a1-ac3f-a57a20b47f69)
 
@@ -16,7 +16,7 @@ The project includes MongoDB, Express, React, GraphQL and Apollo Server, check o
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Tests](#tests)
+- [Deployed Webpage](#deployedwebpage)
 - [Contributing](#contributing)
 - [Credits](#credits)
 - [License](#license)
@@ -27,17 +27,16 @@ You can install Node.js and clone this repository to your local machine. To run 
 
 ## Usage
 
-
 Create a profile on the Sign Up page to start adding friends and creating events. Once logged in you can create events, add friends, or cancel plans. You can view a demo here <https://watch.screencastify.com/v/LcRht9Tip9a2yeuFWeSN>
 
 ![home-page](assets/CancelledSS.jpg)
 
 
-### Deployed Webpage
 
-## Tests
+## Deployed Webpage
 
-N/A
+[Cancelled on Heroku](https://cancelled-31d22d03f3fe.herokuapp.com/) 
+
 
 ## Contributing
 
